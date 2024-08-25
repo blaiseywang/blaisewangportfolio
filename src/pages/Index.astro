@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/mainpage/Hero.astro";
+import Gallery from "../components/mainpage/Gallery.astro";
+const pageTitle = "Home";
+---
+<BaseLayout pageTitle={ pageTitle }>
+    <div class="p-8">
+        <Hero />
+    </div>
+    <div class="pb-8 px-8">
+        <Gallery />
+    </div>
+</BaseLayout>
