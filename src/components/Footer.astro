@@ -1,7 +1,54 @@
 ---
 import Navigation from './Navigation.astro';
 ---
-<footer class="grid grid-cols-2 p-8">
-    <Navigation section="instagram" />
-    <Navigation section="linkedin" />
+<footer class="bg-gray-200 flex flex-col justify-">
+
+    <div class="flex flex-row flex-wrap p-2 items-center justify-between">
+        <div class="grid grid-cols-2 gap-4 p-6">
+            <Navigation section="instagram" url="https://www.instagram.com/blaise.works/"/>
+            <Navigation section="linkedin" url="https://www.linkedin.com/in/blaise-wang-194026325/"/>
+        </div>
+        <div class="flex-initial grow">
+        </div class="grow">
+            <a href="mailto:blaise.ywang@gmail.com"
+            class="text-4xl font-bold tracking-tight">
+                blaise.ywang@gmail.com
+            </a>
+        </div>
+    </div>
+    <div class="items-stretch">
+        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="500">
+            <img src="Blaise Wang.svg" class="opacity-5">
+        </div>
+        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">
+            <img src="Blaise Wang.svg" class="opacity-25">
+        </div>
+        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1500">
+            <img src="Blaise Wang.svg" class="opacity-75">
+        </div>
+        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="2000">
+            <img src="Blaise Wang.svg">
+        </div>
+    </div>
+    <div class="self-stretch flex flex-col ">
+        <div data-aos="fade-right" data-aos-easing="ease-out" class="pb-1">
+            <hr class="h-3 bg-black mx-auto">
+        </div>
+        <div data-aos="fade-right" data-aos-easing="ease-out" class="pb-2">
+            <hr class="h-6 bg-black mx-auto">
+        </div>
+        <div class="pb-5">
+            <hr class="h-2 bg-black mx-auto">
+        </div>
+        <div class="">
+            <hr class="h-1 bg-black mx-auto">
+        </div>
+        <div class="flex flex-row justify-between">
+            <p>CURRENTLY IN PROVIDENCE, RI (GMT-5)</p>
+            <p>This website was made using Astro & Tailwind CSS :3</p>
+        </div>
+        <div class="self-center flex-initial shrink">
+            <p class="object-center  p-2">TOP</p>
+        </div>
+    </div>
 </footer>

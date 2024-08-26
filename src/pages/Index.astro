@@ -2,13 +2,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/mainpage/Hero.astro";
 import Gallery from "../components/mainpage/Gallery.astro";
+import About from "../components/mainpage/About.astro";
 const pageTitle = "Home";
 ---
-<BaseLayout pageTitle={ pageTitle }>
-    <div class="p-8">
+<BaseLayout pageTitle={ pageTitle } class="flex space-y-7">
+    <div class="p-8 pb-7">
+        <Hero />
+        <Hero />
+        <Hero />
         <Hero />
     </div>
-    <div class="pb-8 px-8">
+    <div class="pb-8">
         <Gallery />
+    </div>
+    <div>
+        <About />
     </div>
 </BaseLayout>
