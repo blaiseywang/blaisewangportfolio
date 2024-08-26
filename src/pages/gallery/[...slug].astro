@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'gallery'>;
+}
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection('gallery');
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+    <BaseLayout>
+        <div class="grid grid-rows-2 justify-center items-center p-6">
+                <div class="overflow-hidden rounded-lg bg-gray-300 transition-all duration-500 ease-out hover:scale-105 hover:my-4">
+                    <Image class="object-cover" src={post.data.cover} alt={post.data.title}>
+                </div>
+            <div class="self-start">
+                <div class="flex flex-row gap-1 justify-between">
+                    <div data-aos="slide-left" data-aos-duration="2000" data-aos-easing="ease" class="justify-self-start">
+                        <p class="text-2xl">TITLE </p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="2500"
+                        class="basis-2/3 shrink flex-1 justify-self-start self-start pr-10 pl-2">
+                        <hr class="h-px my-3 rounded bg-gray-400 border-0">
+                    </div>
+                    <p data-aos="fade-right" data-aos-duration="2500" data-aos-easing="ease-out-back" class="justify-self-end text-5xl">{post.data.title}</p>
+                </div>
+                <div class="py-2 flex flex-row justify-between">
+                        <p data-aos="slide-left" data-aos-duration="3000" data-aos-easing="ease">
+                            description 
+                        </p>
+                        <p data-aos="slide-right" data-aos-duration="3000" data-aos-easing="ease" class="justify-self-end">
+                            {post.data.description}
+                        </p>
+                </div>
+            </div>
+        </div>
+        <Content />
+    </BaseLayout>
