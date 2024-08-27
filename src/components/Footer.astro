@@ -3,61 +3,92 @@ import Navigation from './Navigation.astro';
 import { Image } from "astro:assets";
 import FooterGraphic from '../assets/Blaise-Wang.svg'
 ---
-<footer class="bg-gray-200 flex flex-col content-center justify-between">
-
-    <div id="first-row-footer" class="flex flex-row flex-wrap p-2 items-center justify-between">
-        <div class="grid grid-cols-2 gap-4 p-6">
-            <Navigation section="instagram" url="https://www.instagram.com/blaise.works/"/>
-            <Navigation section="linkedin" url="https://www.linkedin.com/in/blaise-wang-194026325/"/>
+<footer class="bg-gray-100">
+    <hr>
+    <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+class="relative">
+        <div class=" rounded-b-1/5 overflow-clip flex flex-col content-center justify-between">
+            <div id="first-row-footer" class="flex flex-row flex-wrap-reverse md:flex-wrap px-2 pb-12 items-center justify-between">
+                <div class="flex flex-row grow pb-10 px-3 pt-3 self-start gap-10 justify-between">
+                    <div>
+                        <p class="text-xl font-bold ">Menu</p>
+                        <hr class="h-px bg-black">
+                        <div data-aos="slide-up" data-aos-duration="500" data-aos-easing="ease-out" data-aos-anchor-placement="bottom-bottom"
+                            class="text-lg flex flex-col gap-2 pt-2">
+                            <Navigation section="Home" url="/" />
+                            <Navigation section="Works" url="/" />
+                            <Navigation section="About" url="/" />
+                            <Navigation section="Contact" url="/" />
+                            </div>
+                    </div>
+                    <div class="items-end flex-col justify-items-end">
+                        <p class="text-xl font-bold ">Contact</p>
+                        <hr class="h-px bg-black">
+                        <div data-aos="slide-up" data-aos-duration="500" data-aos-easing="ease-out" data-aos-anchor-placement="bottom-bottom"
+                            class="text-lg flex flex-col gap-2 pt-2 self-end">
+                            <Navigation section="instagram" url="https://www.instagram.com/blaise.works/"/>
+                            <Navigation section="linkedin" url="https://www.linkedin.com/in/blaise-wang-194026325/"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-initial grow basis-0 lg:basis-1/4 xl:basis-1/3 2xl:basis-1/3">
+                </div>
+                <div class="self-start justify-self-end shrink flex flex-col items-end gap-1">
+                    <a href="mailto:blaise.ywang@gmail.com"
+                    class="object-scale-down text-3xl xl:text-5xl font-bold tracking-tight p-1">
+                        blaise.ywang@gmail.com
+                    </a>
+                </div>
+            </div>
+            
+            <div class="sticky bottom-0 scroll-smooth">
+                <div id="footer-logo"class=" flex flex-row items-stretch justify-end">
+                    <div class="flex-1 basis-0 shrink lg:basis-0 xl:basis-1/3 2xl:basis-1/2"></div>
+                    <div class="grow pt-1">
+                        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="750" class="">
+                            <Image src={ FooterGraphic } class="opacity-5 blur-xs" alt="Blaise Wang">
+                        </div>
+                        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">
+                            <Image src={ FooterGraphic } class="opacity-25 blur-xs" alt="Blaise Wang"></Image>
+                        </div>
+                        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1500">
+                            <Image src={ FooterGraphic } class="opacity-75 blur-xs" alt="Blaise Wang">
+                        </div>
+                        <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="2000">
+                            <Image src={ FooterGraphic }  alt="Blaise Wang">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="items-stretch">
+                        <div id="lines" class="">
+                            <div data-aos="slide-right" data-aos-duration="3000" data-aos-easing="ease-in-out-sine" data-aos-anchor-placement="top-bottom" class="pb-1 m-0">
+                                <hr class="h-4 bg-black">
+                            </div>
+                            <div data-aos="slide-right" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" class="pb-2">
+                                <hr class="h-8 bg-black">
+                            </div>
+                            <div data-aos="slide-right" data-aos-duration="2700" data-aos-anchor-placement="top-bottom" data-aos-easing="ease" class="pb-5">
+                                <hr class="h-2 bg-black">
+                            </div>
+                            <div id="last-line" data-aos="slide-right" data-aos-duration="3000" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out"class="pb-0">
+                                <hr class="h-1 bg-black">
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
-        <div class="flex-initial grow">
-        </div class="grow">
-            <a href="mailto:blaise.ywang@gmail.com"
-            class="text-4xl font-bold tracking-tight">
-                blaise.ywang@gmail.com
-            </a>
+        <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1000" data-aos-anchor-placement="center-bottom"  data-aos-easing="ease" 
+        class="absolute translate-y-4 inset-2 blur-md bg-gradient-to-t from-sky-950 via-cyan-500/10 via-10% z-10 rounded-b-1/5">
+
         </div>
     </div>
-
-    <div id="footer-logo"class=" flex flex-row justify-end">
-        <div class="flex-1 basis-0 shrink xl:basis-1/6 2xl:basis-1/2"></div>
-        <div class="grow">
-            <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="750" class="">
-                <Image src={ FooterGraphic } class="opacity-5 blur-xs" alt="Blaise Wang">
-            </div>
-            <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">
-                <Image src={ FooterGraphic } class="opacity-25 blur-xs" alt="Blaise Wang"></Image>
-            </div>
-            <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1500">
-                <Image src={ FooterGraphic } class="opacity-75 blur-xs" alt="Blaise Wang">
-            </div>
-            <div data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="2000">
-                <Image src={ FooterGraphic }  alt="Blaise Wang">
-            </div>
-        </div>
+    <div data-aos="fade-right" data-aos-mirror="false" data-aos-duration="2000" data-aos-anchor="#lines" data-aos-delay="200" data-aos-easing="ease-in-out"class="pb-0 px-12 pt-5">
+        <hr class="h-1 bg-black px-20">
     </div>
-
-    <div class="items-stretch pb-20">
-            <div id="lines" class="">
-                <div data-aos="slide-right" data-aos-duration="3000" data-aos-easing="ease-in-out-sine" class="pb-1">
-                    <hr class="h-4 bg-black">
-                </div>
-                <div data-aos="slide-right" data-aos-duration="1500" class="pb-2">
-                    <hr class="h-8 bg-black">
-                </div>
-                <div data-aos="slide-right" data-aos-duration="2700" data-aos-easing="ease" class="pb-5">
-                    <hr class="h-2 bg-black">
-                </div>
-                <div data-aos="slide-right" data-aos-duration="2700" data-aos-easing="ease-out"class="pb-0">
-                    <hr class="h-1 bg-black">
-                </div>
-            </div>
-        <div class="flex flex-row justify-between">
-            <p>CURRENTLY IN PROVIDENCE, RI (GMT-5)</p>
-            <p>This website was made using Astro & Tailwind CSS :3</p>
-        </div>
-        <div class="">
-            <p class="object-center  p-2">TOP</p>
-        </div>
+    <div data-aos="fade-up" data-aos-mirror="false" data-aos-duration="2500" data-aos-anchor="#lines" data-aos-delay="" data-aos-easing="ease-out"
+    class="flex flex-row justify-between px-12 pb-5">
+        <p>CURRENTLY IN PROVIDENCE, RI (GMT-5)</p>
+        <p>This website was made using Astro & Tailwind CSS :3</p>
     </div>
 </footer>
