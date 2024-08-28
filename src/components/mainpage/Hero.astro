@@ -1,21 +1,65 @@
 ---
 import '../../styles/global.css';
+import { Image } from "astro:assets";
+import gunImage from "../../assets/gun.png" ;
 ---
-<hero class="w-full grid grid-cols-3 gap-10 bg-gray-100">
-    <div class="bg-gray-200">
-        <img class="w-4/6 float-start" src="head.svg"> 
-        <p dir="ltr">
-            This is going to be an image of me and a paragraph that is cool.
-        </p>
-    </div>
-    <div class="col-start-2 col-end-4 bg-gray-300">
-        <div class="object-contain">
-            <div>
-                <p class="text-xl">Blaise Wang</p>
-            </div>
-            <div>
-                Student artist currently studying at Rhode Island School of Design
+<hero class=" w-full h-screen top-0 bg-gray-700">
+    <div data-aos="fade-up" data-aos-duration="2000"class="relative "data-aos-mirror="false">
+        <div data-aos="fade-down" data-aos-mirror="false" data-aos-duration="700" data-aos-anchor="#lines" data-aos-delay="" data-aos-easing="ease-in-out"
+        class="flex flex-row px-12 justify-between content-end items-end pt-12">
+        <div class="bg-white/75 z-40 pl-4">
+            <p class="text-left text-lg "></p>
+        </div>
+            <div class="">
+                <p class="font-bold text-right">PORTFOLIO.BLAISE </p>
             </div>
         </div>
-    </div>
+        <div data-aos="fade-right" data-aos-mirror="false" data-aos-duration="2000" data-aos-anchor="#lines" data-aos-delay="200" data-aos-easing="ease-in-out"data-aos-once="true"class="pb-0 px-12 pb-5">
+            <hr class="h-1 bg-black px-20">
+        </div>
+        <div class="relative flex flex-col pt-0 overflow-hidden rounded-t-1/6 ">
+            <div class="items-stretch">
+                <div id="lines" class="">
+                    <div id="last-line" data-aos="slide-right" data-aos-duration="3000" data-aos-anchor-placement="bottom-bottom" data-aos-once="true"data-aos-easing="ease-out"class="pt-0">
+                        <hr class="h-1 bg-black">
+                    </div>
+                    <div data-aos="slide-right" data-aos-duration="2700" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease" data-aos-once="true"class="pt-5">
+                        <hr class="h-2 bg-black">
+                    </div>
+                    <div data-aos="slide-right" data-aos-duration="1500" data-aos-anchor-placement="bottom-bottom" data-aos-once="true"class="pt-2">
+                        <hr class="h-8 bg-black">
+                    </div>
+                    <div data-aos="slide-right" data-aos-duration="3000" data-aos-easing="ease-in-out-sine" data-aos-anchor-placement="top-bottom" data-aos-once="true"class="pt-1 m-0">
+                        <hr class="h-4 bg-black">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-5 h-screen">
+            <div data-aos="fade-right" data-aos-duration="2500" class="col-start-1 col-span-8 -translate-y-5 ">
+                <p class="text-9xl">THE HEART</p>
+            </div>
+            <div class="text-6xl col-end-6 row-start-3 italic">
+                PLAYS
+            </div>
+            <div class="col-start-2 col-span-4 row-start-4 blur ">
+                <p class="text-9xl">IN ways the</p>
+            </div>
+            <p></p>
+            <p></p>
+            <p class="text-8xl row-start-7 col-start-3 translate-x-20">MIND CAN'T FIGURE OUT</p>
+            <div class="row-start-8 col-start-3 -translate-y-80 translate-x-20">
+                <p class="text-8xl">MIND CAN'T FIGURE OUT</p>
+            </div>
+            <div class="text-6xl font-bold translate-x-4 row-start-8 col-start-3 col-span-4 text-black text-opacity-50 -translate-y-12 italic justify-self-end flex-justify-items-end">
+                <p>-KENDRICK LAMAR</p>
+            </div>
+            </div>
+            <div class=" absolute flex flex-row scale-150 md:scale-100 -translate-y-12 top-48  z-10">
+            <Image src={ gunImage } alt="..." class="object-contain rotate-90"/>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500" data-aos-mirror="false" data-aos-anchor-placement="center-bottom"  data-aos-easing="ease-out" 
+        class="absolute mt-24 inset-2 blur-md bg-gradient-to-b from-cyan-950 via-sky-500/10 via-10% z-10 rounded-t-1/5">
+
+        </div>
 </hero>

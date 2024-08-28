@@ -8,21 +8,21 @@ import 'aos/dist/aos.css';
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width" />
         <title>{ pageTitle }</title>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
-    <body class="">
+    <body class="bg-gray-100 scroll-smooth">
         <Header class=""/>
-        <div class="fixed top-0 z-20 p-2">
+        <div class="fixed top-0 z-50 p-2">
             <Logo />
         </div>
         <div>
-            <hr>
-            <div class="relative min-h-dvh bg-white z-10 pt-20 mb-20">
+            <hr class="">
+            <div class="min-h-dvh bg-white z-0 pt-20 mb-30">
                 <slot />
             </div>
         </div>
@@ -31,6 +31,7 @@ const { pageTitle } = Astro.props;
         </div>
         <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
         <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script type="module" src="/src/js/carousel.js"></script>
         <script is:inline>
         AOS.init({
             mirror:true,

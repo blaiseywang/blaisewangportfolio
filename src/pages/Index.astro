@@ -5,14 +5,11 @@ import Gallery from "../components/mainpage/Gallery.astro";
 import About from "../components/mainpage/About.astro";
 const pageTitle = "Home";
 ---
-<BaseLayout pageTitle={ pageTitle } class="flex space-y-7">
-    <div class="px-2 pb-7">
-        <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
+<BaseLayout pageTitle={ pageTitle } class="">
+    <div class="sticky top-0">
+        <Hero class="sticky top-0"/>
     </div>
-    <div class="pb-8 snap-start">
+    <div class="sticky top-0">
         <Gallery />
     </div>
     <div>

@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 div {
     font-family: monospace;
@@ -10,4 +12,18 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos-duration='4000']{
 
   body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos-duration='5000']{
     transition-duration: 5000ms;
+  }
+
+  @layer base {
+    html {
+      @apply scroll-smooth;
+    }
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
