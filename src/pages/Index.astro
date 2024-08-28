@@ -2,15 +2,19 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/mainpage/Hero.astro";
 import Gallery from "../components/mainpage/Gallery.astro";
+import Gallery2 from "../components/mainpage/Gallery2.astro";
 import About from "../components/mainpage/About.astro";
 const pageTitle = "Home";
 ---
 <BaseLayout pageTitle={ pageTitle } class="">
     <div class="sticky top-0">
-        <Hero class="sticky top-0"/>
+        <Hero class="sticky top-0 pb-96"/>
     </div>
-    <div class="sticky top-0">
+    <div class="sticky top-0 pb-64">
         <Gallery />
+    </div>
+    <div class="sticky top-0 pb-24">
+        <Gallery2 />
     </div>
     <div>
         <About />

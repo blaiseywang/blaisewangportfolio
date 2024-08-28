@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 
 
 const galleryCards = await getCollection('gallery', ({ data }) => {
-    const String = 'identity';
+    const String = 'commentary';
   return data.tags.includes(String) == true;
 });
 ---
@@ -18,11 +18,10 @@ const galleryCards = await getCollection('gallery', ({ data }) => {
                     <div class="flex-col h-full 
                         hover:text-2xl text-transparent hover:text-black hover:py-2 
                         transition-all duration-1000 rounded-lg ease-in-out">
-                        <a href=""><Image
+                      <Image
                         src={item.data.cover}
                         alt="..."
-                        class="w-full h-full object-cover hover:rounded-lg hover:transition-all duration-1000 ease-in-out" data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-bottom"data-aos-ease="ease-out"/>
-                        </a>
+                        class="w-full h-full object-cover hover:rounded-lg hover:transition-all duration-1000 ease-in-out" data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-bottom" data-aos-ease="ease-out"/>
                         <div class="flex flex-row grow self-end">
                             <p class="w-content pr-10">
                                 {item.data.title}
@@ -34,10 +33,10 @@ const galleryCards = await getCollection('gallery', ({ data }) => {
         </div>
         <div class=" pb-8 text-right pr-8 -translate-y-12">
             <div class="text-right text-6xl pb-2">
-                change?
+                the internet
             </div>
             <div>
-                some paintings that helped me discover myself 
+                weird places to be
             </div>
         </div>
     </div>
